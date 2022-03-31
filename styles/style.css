@@ -1,9 +1,8 @@
 :root {
   --primary-color: #fff;
   --secondary-color: rgb(10, 172, 172);
-  --font-main: "Gotham", sans-serif;
+  --font-main: "GothamSSm";
 }
-
 @font-face {
   font-family: "gothamSSm";
   src: url(https://cdn-design.tesla.com/tds-fonts/3.x/woff2/GothamSSm-Light_Web.woff2)
@@ -22,62 +21,82 @@ body {
   height: 100vh;
   display: relative;
   /* font-family: ; */
-  font-family: "GothamSSm";
+  font-family: var(--font-main);
 }
-.header-container {
+.first-container {
   display: flex;
-  justify-content: flex-start;
+  /* justify-content: center; */
   flex-direction: column;
   text-align: center;
+  align-items: center;
   width: 100%;
 }
 .header-flex {
   display: flex;
-  justify-content: space-between;
+  /* position: relative;*/
+  justify-content: center;
   flex-direction: row;
-  text-align: center;
+  align-items: center;
+  /* text-align: center; */
   width: 100%;
-  height: 50px;
-  /* position: relative; */
+
   z-index: 1;
+  /* 
+  position: sticky; */
 }
 
 .logo {
-  width: 70px;
+  /* width: 70px; */
   height: auto;
-  padding: 15px 15px;
+  padding: 15px 0px 15px 50px;
+
   display: flex;
   /* align-self: flex-end; */
-  width: 25%;
-  border: black 2px solid;
+  /* width: 25%; */
+  /* border: black 2px solid; */
+  position: relative;
+  flex-grow: 1;
 }
 
 svg {
   color: var(--primary-color);
+
+  width: 32%;
 }
 
-.main-bar {
-  width: 50%;
+.main-nav {
+  flex-grow: 2;
 }
-.side-bar {
-  width: 25%;
+.side-nav {
+  flex-grow: 1;
 }
 .main-nav ul {
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   /* flex-grow: 1; */
   align-items: center;
   text-align: center;
   padding: 0px 8px;
-  flex-grow: 1;
-  border: black 2px solid;
+
+  /* border: black 2px solid; */
   font-size: 14px;
 }
 
 .main-nav ul li {
-  padding: 15px;
+  padding: 12px 0px;
+  margin: 5px 0px;
   /* margin-top: 10px; */
+  font-weight: bold;
+}
+
+.btn {
+  padding: 8px 17px;
+  transition: 0.7s;
+  border-radius: 12px;
+}
+.btn:hover {
+  background: grey;
 }
 
 .side-nav ul {
@@ -86,27 +105,33 @@ svg {
   justify-content: flex-end;
   align-items: center;
   text-align: center;
-  padding-left: 32px;
-  flex-grow: 1;
-  border: black 2px solid;
+  padding: 0px 32px;
+
+  /* border: black 2px solid; */
   font-size: 14px;
 }
 
 .side-nav ul li {
-  padding: 15px;
+  padding: 12px 0px;
+  margin: 5px 0px;
   /* margin-top: 10px; */
+  font-weight: bold;
 }
 
 .main-nav a {
   color: var(--primary-color);
   text-decoration: none;
-  padding: 4px 8px;
+  /* padding: 4px 8px; */
 }
 
+/* .main-nav ul li:hover {
+  background: grey;
+  border-radius: 5%;
+} */
 .side-nav a {
   color: var(--primary-color);
   text-decoration: none;
-  padding: 4px 8px;
+  /* padding: 4px 8px; */
 }
 
 .header-name {
@@ -116,8 +141,8 @@ svg {
 
 .header-name h1 {
   font-size: 40px;
-  font-family: "GothamSSm";
-  font-weight: 100;
+  font-family: var(--font-main);
+  font-weight: bold;
 }
 .main-img {
   height: 100vh;
@@ -127,4 +152,16 @@ svg {
 }
 main {
   color: var(--primary-color);
+}
+
+.footer-flex {
+  display: flex;
+  /* position: relative;*/
+  /* justify-content: flex-end;
+  align-items: flex-end; */
+  /* text-align: center; */
+  max-width: 50%;
+  z-index: 1;
+
+  margin-top: 55vh;
 }
