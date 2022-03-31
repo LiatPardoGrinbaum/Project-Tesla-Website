@@ -1,0 +1,130 @@
+:root {
+  --primary-color: #fff;
+  --secondary-color: rgb(10, 172, 172);
+  --font-main: "Gotham", sans-serif;
+}
+
+@font-face {
+  font-family: "gothamSSm";
+  src: url(https://cdn-design.tesla.com/tds-fonts/3.x/woff2/GothamSSm-Light_Web.woff2)
+    format("woff2");
+  font-weight: "light";
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth; /* to check */
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  display: relative;
+  /* font-family: ; */
+  font-family: "GothamSSm";
+}
+.header-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+}
+.header-flex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  text-align: center;
+  width: 100%;
+  height: 50px;
+  /* position: relative; */
+  z-index: 1;
+}
+
+.logo {
+  width: 70px;
+  height: auto;
+  padding: 15px 15px;
+  display: flex;
+  /* align-self: flex-end; */
+  width: 25%;
+  border: black 2px solid;
+}
+
+svg {
+  color: var(--primary-color);
+}
+
+.main-bar {
+  width: 50%;
+}
+.side-bar {
+  width: 25%;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  /* flex-grow: 1; */
+  align-items: center;
+  text-align: center;
+  padding: 0px 8px;
+  flex-grow: 1;
+  border: black 2px solid;
+  font-size: 14px;
+}
+
+.main-nav ul li {
+  padding: 15px;
+  /* margin-top: 10px; */
+}
+
+.side-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  padding-left: 32px;
+  flex-grow: 1;
+  border: black 2px solid;
+  font-size: 14px;
+}
+
+.side-nav ul li {
+  padding: 15px;
+  /* margin-top: 10px; */
+}
+
+.main-nav a {
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 4px 8px;
+}
+
+.side-nav a {
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 4px 8px;
+}
+
+.header-name {
+  color: var(--primary-color);
+  margin-top: 5vh;
+}
+
+.header-name h1 {
+  font-size: 40px;
+  font-family: "GothamSSm";
+  font-weight: 100;
+}
+.main-img {
+  height: 100vh;
+
+  background: url("../images/car-1.jpg") no-repeat center center/cover;
+  position: relative;
+}
+main {
+  color: var(--primary-color);
+}
