@@ -1,6 +1,6 @@
 :root {
   --primary-color: #fff;
-  --secondary-color: rgb(10, 172, 172);
+  --secondary-color: #333;
   --font-main: "GothamSSm";
 }
 @font-face {
@@ -13,7 +13,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth; /* to check */
+  scroll-behavior: smooth;
 }
 
 body {
@@ -70,7 +70,7 @@ svg {
 .main-nav {
   flex-grow: 2;
 }
-.side-nav {
+.right-nav {
   flex-grow: 1;
 }
 .main-nav ul {
@@ -102,7 +102,7 @@ svg {
   background: grey;
 }
 
-.side-nav ul {
+.right-nav ul {
   list-style: none;
   display: flex;
   justify-content: flex-end;
@@ -114,7 +114,7 @@ svg {
   font-size: 14px;
 }
 
-.side-nav ul li {
+.right-nav ul li {
   padding: 12px 0px;
   margin: 5px 0px;
   /* margin-top: 10px; */
@@ -131,7 +131,7 @@ svg {
   background: grey;
   border-radius: 5%;
 } */
-.side-nav a {
+.right-nav a {
   color: var(--primary-color);
   text-decoration: none;
   /* padding: 4px 8px; */
@@ -149,6 +149,7 @@ svg {
 }
 .main-img {
   height: 100vh;
+  width: 100%;
 
   background: url("../images/car-1.jpg") no-repeat center center/cover;
   position: relative;
@@ -159,16 +160,24 @@ main {
 
 .footer-flex {
   display: flex;
-  /* position: relative;*/
+  /* position: relative; */
   justify-content: space-between;
+  /* align-self: center; */
   /* align-items: flex-end; */
   /* text-align: center; */
-  width: 764px;
+  /* width: 50%; */
+  width: 50%;
   z-index: 1;
 
   margin-top: 55vh;
 }
-
+/*maybe i dont need this inner flex */
+/* .inner-footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
 .box-flex {
   display: flex;
   flex-direction: column;
@@ -211,7 +220,7 @@ main {
   padding: 10px 55px;
   border-radius: 20px;
   border: solid white 2px;
-  transition: 0.7s;
+  transition: 0.4s;
 }
 
 .btn-order a:hover {
@@ -219,6 +228,9 @@ main {
   color: #333;
 }
 
+.side-nav {
+  display: sticky;
+}
 .second-container {
   display: flex;
   /* justify-content: center; */
@@ -276,10 +288,10 @@ main {
   line-height: 20px;
   padding: 16px 0px;
 }
-.content-column div a {
+.btn3 {
   text-decoration: none;
   color: black;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--secondary-color);
 }
 .content-column .small {
   font-size: 17px;
@@ -292,7 +304,46 @@ main {
 .content-links-row {
   display: flex;
   flex-direction: row;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+.btn1 {
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--secondary-color);
+  font-weight: lighter;
+  padding: 4px 11px;
+  border-radius: 50%;
+  border: solid #333 3px;
+  transition: 0.4s;
+}
+
+.btn1:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+.btn2 {
+  text-decoration: none;
+  font-size: 12px;
+  color: var(--secondary-color);
+  font-weight: bolder;
+  margin: 0px 10px;
+}
+
+.btn-order2 {
+  text-decoration: none;
+  font-size: 12px;
+  color: var(--secondary-color);
+  font-weight: bolder;
+  padding: 10px 40px;
+  border-radius: 20px;
+  border: solid #333 3px;
+  transition: 0.4s;
+}
+
+.btn-order2:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color);
 }
