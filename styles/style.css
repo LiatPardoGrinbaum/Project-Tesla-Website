@@ -1,13 +1,60 @@
 :root {
   --primary-color: #fff;
   --secondary-color: #333;
-  --font-main: "GothamSSm";
+  --font-main: Gotham SSm;
 }
-@font-face {
+/* @font-face {
   font-family: "gothamSSm";
   src: url(https://cdn-design.tesla.com/tds-fonts/3.x/woff2/GothamSSm-Light_Web.woff2)
     format("woff2");
   font-weight: "light";
+} */
+
+
+
+@font-face {
+  font-display: swap;
+  font-family: Gotham SSm;
+  font-style: normal;
+  font-weight: 500;
+  src: url(https://cdn-design.tesla.com/tds-fonts/3.x/woff2/GothamSSm-Medium_Web.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Gotham SSm;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://cdn-design.tesla.com/tds-fonts/3.x/woff2/GothamSSm-Book_Web.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Gotham SSm;
+  font-style: normal;
+  font-weight: 700;
+  src: url(https://cdn-design.tesla.com/tds-fonts/3.x/woff2/GothamSSm-Bold_Web.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Gotham SSm;
+  font-style: normal;
+  font-weight: 300;
+  src: url(https://cdn-design.tesla.com/tds-fonts/3.x/woff2/GothamSSm-Light_Web.woff2)
+    format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Gotham SSm;
+  font-style: normal;
+  font-weight: 200;
+  src: url(https://cdn-design.tesla.com/tds-fonts/3.x/woff2/GothamSSm-XLight_Web.woff2)
+    format("woff2");
 }
 * {
   box-sizing: border-box;
@@ -17,6 +64,8 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   /* height: 200vh; */
   width: 100%;
   position: relative;
@@ -45,7 +94,9 @@ body {
 
   z-index: 1;
 
-  position: sticky; /* why not working??? */
+  position: sticky; /
+  
+  * why not working??? */
 }
 
 .logo {
@@ -90,7 +141,7 @@ svg {
   padding: 12px 0px;
   margin: 5px 0px;
   /* margin-top: 10px; */
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .btn {
@@ -101,6 +152,8 @@ svg {
 .btn:hover {
   background: grey;
 }
+
+
 
 .right-nav ul {
   list-style: none;
@@ -118,7 +171,7 @@ svg {
   padding: 12px 0px;
   margin: 5px 0px;
   /* margin-top: 10px; */
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .main-nav a {
@@ -145,7 +198,7 @@ svg {
 .header-name h1 {
   font-size: 40px;
   font-family: var(--font-main);
-  font-weight: bold;
+  font-weight: 500;
 }
 .main-img {
   height: 100vh;
@@ -208,7 +261,7 @@ main {
 .box-flex-p {
   font-size: 12px;
   color: var(--primary-color);
-  font-weight: bold;
+  font-weight: 400;
   margin-top: 10px;
 }
 
@@ -299,7 +352,7 @@ main {
 }
 .content-column .big {
   font-size: 28px;
-  font-weight: bold;
+  font-weight: 500;
 }
 .content-links-row {
   display: flex;
@@ -346,4 +399,128 @@ main {
 .btn-order2:hover {
   background: var(--secondary-color);
   color: var(--primary-color);
+}
+
+.container-side-nav{
+  display: flex;
+  position: fixed;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 3;
+}
+.side-nav ul li a{
+  color: var(--primary-color);
+
+  padding: 7px 7px;
+  border-left: 1px solid grey;
+  line-height: 20px;
+  font-size: 10px;
+  font-weight: bold;  
+  color: transparent;
+  text-decoration: none;
+
+}
+
+.side-nav ul li {
+  list-style: none;
+  margin-left:  14px;
+  margin-bottom: 10px;
+  
+}
+/* 
+.side-nav ul li a {
+  text-decoration: none;
+  color: transparent;
+} */
+ .side-nav  .current1 {
+  border-left:3px solid var(--primary-color);
+}
+/* .side-nav .current2 {
+  border-left:3px solid var(--primary-color);
+}  */
+.side-nav ul li a:hover {
+  border-left: 3px solid var(--primary-color);
+
+  color: var(--primary-color)
+}
+/* .side-nav{
+  display: flex;
+ 
+ 
+  justify-content: flex-start;
+z-index: 3;
+} */
+
+
+/* @media (min-height:100vh){
+  .side-nav ul li a:hover {
+    border-left: 3px solid var(--secondary-color);
+    color: var(--secondary-color)
+}
+
+} */
+
+.third-container {
+  display: flex;
+  justify-content: center;
+/* flex-direction: column; */
+  text-align: center;
+  align-items: center;
+  width: 100%;
+  height: 502px;
+  position: relative;
+}
+
+.last-img {
+  background: url(../images/car-3.jpg) no-repeat center center/cover;
+  width: 100%;
+ 
+  /* object-fit:cover; */
+}
+.inner-flex {
+  display: flex;
+  
+  /* position: relative; */
+  justify-content: space-between;
+  /* align-self: center; */
+  /* align-items: flex-start; */
+  /* text-align: center; */
+  /* width: 50%; */
+  width: 57%;
+  z-index: 1;
+  margin-top: 40vh;
+
+  /* margin-top: 70vh; */
+}
+
+/*making all boxex the same width with flex:1 */
+.box-flex2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 10px;
+  flex:1;
+}
+
+@media (max-width:1200px) {
+    #menu {
+    font-size: 26px;
+    color: var(--primary-color);
+    background: grey;
+    display: block;
+    }
+    .btn {
+      display: none;
+    }
+    .btn {
+      display: none;
+    }
+    .header-flex {
+      flex: wrap;
+    } 
+    .footer-flex {
+      flex: wrap;
+    }
 }

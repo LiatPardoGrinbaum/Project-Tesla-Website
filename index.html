@@ -7,13 +7,16 @@
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link href="http://fonts.cdnfonts.com/css/gotham" rel="stylesheet" />
-
+    <!-- <script
+      src="https://kit.fontawesome.com/3cae5c2bbd.js"
+      crossorigin="anonymous"
+    ></script> -->
     <title>Model 3 | Tesla</title>
   </head>
   <body>
     <div class="first-container main-img">
       <div class="header-flex">
-        <div class="logo">
+        <div class="logo" id="firstpage">
           <svg
             class="tds-icon tds-icon-logo-wordmark tds-site-logo-icon"
             viewBox="0 0 342 35"
@@ -39,7 +42,7 @@
           <ul>
             <li><a class="btn" href="#">Shop</a></li>
             <li><a class="btn" href="#">Account</a></li>
-            <li><a class="btn" href="#">Menu</a></li>
+            <li><a class="btn" id="menu" href="#">Menu</a></li>
           </ul>
         </div>
       </div>
@@ -83,7 +86,7 @@
     <div class="second-container">
       <div class="main-flex">
         <div class="second-img"></div>
-        <div class="safty">
+        <div class="safty" id="secondpage">
           <div class="content-column">
             <span class="small"> Safety</span>
             <div class="big">Built for Safety</div>
@@ -116,15 +119,63 @@
         </div>
       </div>
     </div>
-    <svg
-      class="tds-icon tcl-icon tcl-icon--round tcl-showcase__drawer-open-button-svg"
-      viewBox="0 0 30 30"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <use xlink:href="#tcl-icon-plus--small"></use>
-    </svg>
-    <!-- <svg class="tds-icon tds-icon-chevron--filled--180" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-      <use xlink:href="#tds-icon-chevron--filled--180"></use>
-    </svg> -->
+
+    <div class="third-container last-img">
+      <div class="inner-flex">
+        <div class="box-flex2">
+          <div class="box-up">
+            <div class="div-up">SVG</div>
+            <span class="span-up">3. 1 s</span>
+          </div>
+          <p class="box-flex-p">
+            Quickest acceleration—from zero to 60 mph* in as little as 3.1
+            seconds
+          </p>
+        </div>
+
+        <div class="box-flex2">
+          <div class="box-up">
+            <span class="span-up">162 mph</span>
+          </div>
+          <p class="box-flex-p">
+            Improved handling and aerodynamics allow for a top speed of 162 mph
+          </p>
+        </div>
+
+        <div class="box-flex2">
+          <div class="box-up">
+            <span class="span-up">AWD</span>
+          </div>
+          <p class="box-flex-p">
+            Dual Motor All-Wheel Drive instantly controls traction and torque,
+            in all weather conditions
+          </p>
+        </div>
+
+        <!-- <div class="box-flex">
+          <div class="btn-order">
+            <a href="https://www.tesla.com/he_IL/model3/design#overview"
+              >ORDER NOW</a
+            >
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+    <div class="container-side-nav">
+      <div class="side-nav">
+        <ul>
+          <li><a class="current1" href="#firstpage">MODEL 3</a></li>
+          <li><a class="current2" href="#secondpage">SAFTY</a></li>
+          <li><a href="#">PERFORMANCE</a></li>
+          <li><a href="#">ALL-WHEEL-DRIVE</a></li>
+          <li><a href="#">RANGE</a></li>
+          <li><a href="#">AUTOPILOT</a></li>
+          <li><a href="#">INTERIOR</a></li>
+          <li><a href="#">SPECS</a></li>
+          <li><a href="#">ORDER</a></li>
+        </ul>
+      </div>
+    </div>
   </body>
 </html>
